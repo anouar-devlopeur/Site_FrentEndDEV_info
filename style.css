@@ -63,11 +63,17 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 /** Section Home       *****/
 
 nav{
+    position: fixed;
+    /* nav msafat fi tele*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
     background: #000;
-    padding-top:20px;
+    padding-top:2px;
     padding-left: var(--padding);
     padding-right: var(--padding);
-    padding-bottom: 20px;
+    padding-bottom: 2px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -322,7 +328,7 @@ transform: scaleY(0);
 }
 /***************    footer     ************/
 footer{
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 2rem var(--padding);
     background-color: var(--bgcolor-1);
     align-items: center;
@@ -358,16 +364,18 @@ footer .socialmedia img:hover{
     background-color: rgb(10, 10, 10);
     /*opacity*/
     background: rgb(0,0,0,0.7);
-    height: 60vh;
+    height: 50vh;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 30%;
+    padding: 15px 0;
+  
     border-radius: 10px ;
 }
 .loginhere{
     width:70%;
-    margin:0 auto;
+    margin: 0 auto;
     padding:10px 0;
     border-radius: 7px;
     border:none;
@@ -378,7 +386,7 @@ footer .socialmedia img:hover{
 }
 .login{
     width:70%;
-    margin:0 auto;
+    margin:10px auto;
     padding:10px 0;
     border-radius: 7px;
     background-color: var(--primrycolo);
@@ -396,6 +404,7 @@ footer .socialmedia img:hover{
 .contentreigtht>input{
     width: 70%;
     padding:10px 0;
+    /* margin:0px auto; */
     border:none;
     outline:none;
     margin: 0 auto;
@@ -413,11 +422,11 @@ color:white;
 }
 .sociallogin{
     width:70%;
-    margin:0 auto;
+    margin:10px auto;
     display:flex;
     justify-content: space-evenly;
     color:white;
-    font-size:30px;
+    font-size:25px;
 }
 /****************
 ****************** Menu  **********
@@ -482,7 +491,7 @@ color:white;
         
     }
     .home .contextexte {
-        padding-top: 10%;
+        padding: 5% 0;
         /* bottom: 70px; */
     }
     h1 {
@@ -516,18 +525,19 @@ color:white;
         margin: 16px;
     }
     .contentfooter{
-        width: 40%;
+        width: 50%;
         height: 50%;
     }
     .contentreigtht {
         /* background-color: rgb(10, 10, 10); */
         /* background: rgb(0,0,0,0.7); */
-        margin-right: 8%;
-        height: 60vh;
+        padding: 10px 0;
+        margin:10px auto;
+        height: 50vh;
         /* display: flex; */
         /* flex-direction: column; */
         /* justify-content: space-evenly; */
-         width: 40%; 
+         width: 36%; 
         /* border-radius: 10px; */
     }
 }
@@ -540,11 +550,50 @@ color:white;
         font-size: 13px;
     
      }
+     #menu{
+        display: block;
+    }
+     nav{
+        position: fixed;
+        /* nav msafat fi tele*/
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        /** Dev info desactive top  **/
+        padding-top: 0;
+        background-color: var(--bgcolor-1);
+        border-bottom: 1px solid var(--bgcolor-2);
+        z-index: 100;
+     }
+     nav>a {
+        display: none;
+     }
+     nav ul{
+        /*none: hidden*/
+        /*block: desactive*/
+        display: none;
+        position: fixed;
+        top: 8%;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    
+        background:var(--bgcolor-2);
+     }
+     nav ul.is-active{
+        display: block;
+     }
      nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+     }
+     /* nav ul li{
         font-size: 20px;
         padding-right: 18px;
         margin: 0 1.2rem;
-    }
+    } */
     .home .contentimg .mypic{
         width: 80%;
     }
@@ -599,10 +648,11 @@ color:white;
    }
     .contentreigtht {
         
-        margin-right: 0;
+        /* margin-right: 0;
         min-height: 40vh;
-       
-         width: 50%; 
+        */
+        height: 43vh;
+        
         
     }
     footer .socialmedia {
@@ -718,25 +768,26 @@ color:white;
     }
    
     footer {
-        min-height: 100vh;
+        /* min-height: 100vh; */
         /* width: 100vw; */
         /* justify-content: center; */
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .contentfooter{
         width: 80%;
         text-align: center;
     }
     .contentreigtht {
-        margin-top: 2%;
-       /* height: 50%; */
+        padding: 10px 0;
+        /* height: 50%; */
         margin-right: 0;
-        width: 60%;
+        margin: 1%;
+        width: 50%;
     }
    
 }
 /*Phone*/
-@media screen and (max-width:575px){
+@media screen and (max-width:600px){
  :root{
     --padding:1.5rem;
  }
@@ -746,7 +797,9 @@ color:white;
  /************* Home*****************/
  .home{
     text-align: center;
- }
+    height: 30%;
+}
+ 
  
  .home .contentimg{
     display: none;
@@ -821,20 +874,8 @@ h3 {
  gap: 3.6rem;
  justify-content: center;
 }
-/*
-.contianer{
- 
-    height: 300px;
- 
-}
-.contianer img{
-    
-    height: 100%;
- 
-}
-.info{
-    height: 90%;
-}*/
+
+
 /**************************************/
 /***************
 ******** Services **************
@@ -853,7 +894,8 @@ footer{
     gap: 1.3rem;   
 }
 .contentreigtht {
-    width: 100%;
+    width: 60%;
+    padding: 10px 0;
     /* padding: 30px; */
 }
 
